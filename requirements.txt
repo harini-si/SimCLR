@@ -2,3 +2,5 @@ datasets
 torch
 tqdm
 matplotlib
+tensorboard
+opencv-python 

@@ -1,0 +1,5 @@
+**.pth.tar
+src/data/stl10_binary.tar.gz
+**/__pycache__
+src/data/stl10_binary
+runs
