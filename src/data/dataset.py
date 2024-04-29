@@ -26,7 +26,7 @@ class SimCLRDataset(Dataset):
                 img1 = self.transform(sample["image"])
                 img2 = self.transform(sample["image"])
 
-                if img1.shape[0] == 1: 
+                if img1.shape[0] == 1:
                     img1 = img1.repeat(3, 1, 1)
                     img2 = img2.repeat(3, 1, 1)
         assert img1.shape == img2.shape

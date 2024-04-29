@@ -51,8 +51,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logging.info("Loading data")
     train_dataset = datasets.STL10("./data", split="test", download=False)
-    # take only 10%
-    train_dataset.data = train_dataset.data[: int(0.1 * len(train_dataset.data))]
+
     color_jitter = transforms.ColorJitter(0.8, 0.8, 0.8, 0.2)
     data_transforms = transforms.Compose(
         [
@@ -64,7 +63,7 @@ if __name__ == "__main__":
         ]
     )
 
-    train_dataset = SimCLRDataset('stl10',train_dataset, transform=data_transforms)
+    train_dataset = SimCLRDataset("stl10", train_dataset, transform=data_transforms)
 
     train_loader = torch.utils.data.DataLoader(
         train_dataset, batch_size=args.batch_size, shuffle=True, drop_last=True

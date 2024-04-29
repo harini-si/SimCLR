@@ -51,8 +51,6 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logging.info("Loading data")
     train_dataset = load_dataset("zh-plus/tiny-imagenet", split="train")
-    # take only 10%
-    train_dataset = train_dataset.select(range(0, len(train_dataset), 10))
     color_jitter = transforms.ColorJitter(0.8, 0.8, 0.8, 0.2)
     data_transforms = transforms.Compose(
         [

@@ -41,7 +41,6 @@ class SimCLR(object):
 
         return logits, labels
 
-
     def train(self, train_loader):
         scaler = GradScaler(enabled=self.args.fp16_precision)
         save_config_file(self.writer.log_dir, self.args)
@@ -76,9 +75,7 @@ class SimCLR(object):
             if epoch_counter >= 10:
                 self.scheduler.step()
 
-            logging.info(
-                f"Epoch: {epoch_counter}\tLoss: {loss}"
-            )
+            logging.info(f"Epoch: {epoch_counter}\tLoss: {loss}")
 
         logging.info("Training has finished.")
         checkpoint_name = "checkpoint_{:04d}.pth.tar".format(self.args.epochs)
