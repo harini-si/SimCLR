@@ -11,8 +11,8 @@ This repository contains an implementation of SimCLR (Simple Framework for Contr
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/harini-si/DL-Project.git
-    cd DL-Project
+    git clone https://github.com/harini-si/SimCLR.git
+    cd SimCLR
     ```
 
 2. Install the required dependencies:
