@@ -3,6 +3,7 @@
 # SimCLR Implementation
 
 Paper link: https://arxiv.org/pdf/2002.05709.pdf 
+
 This repository contains an implementation of SimCLR (Simple Framework for Contrastive Learning of Visual Representations) done as a part of my Deep Learning Project. SimCLR is a self-supervised learning framework that uses contrastive learning to learn useful visual representations without labeled data.
 
 
@@ -10,8 +11,8 @@ This repository contains an implementation of SimCLR (Simple Framework for Contr
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/simclr.git
-    cd simclr
+    git clone https://github.com/harini-si/DL-Project.git
+    cd DL-Project
     ```
 
 2. Install the required dependencies:
@@ -24,5 +25,13 @@ This repository contains an implementation of SimCLR (Simple Framework for Contr
 To train the SimCLR model, run:
 
 ```bash
-python train.py --data_dir /path/to/dataset --epochs 100 --batch_size 256
+cd src
+python main_imagenet.py  --epochs 100 --batch_size 256
+```
+
+To evaluate, run :
+
+```bash
+cd model
+python evaluator.py  
 ```
